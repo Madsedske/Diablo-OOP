@@ -14,12 +14,14 @@ namespace Diablo_OOP
             {
                 Console.WindowWidth = 130;
                 Console.WriteLine("Diablo 3 random weaponbox:");
+                Console.WriteLine("-----------------------------");
                 Console.WriteLine("Weapon classes: Axes - Daggers - Maces - Spears - Swords - Ceremonial Knives - Fist Weapons - Flails - Mighty Weapons - Scythes");
-                Console.WriteLine("Press a key to get a random weapon.");
+                Console.WriteLine("\nPress a key to get a random weapon.");
                 Console.ReadKey();
                 Console.Clear();
                 Console.WriteLine(new WeaponFactory().CreateWeapons().ToString());
                 Console.ReadKey();
+                Console.Clear();
             }
         }
     }

@@ -10,13 +10,22 @@ namespace Diablo_OOP
     {
         int properties;
 
-
-        public MagicWeapons(string name, int damageHigh, int damageLow, double damagePerSecond, double attacksPerSecond, int properties)
-          : base(name, damageHigh, damageLow, damagePerSecond, attacksPerSecond)
+        public MagicWeapons(string weaponType, string name, int damageHigh, int damageLow, double damagePerSecond, double attacksPerSecond, int properties)
+          : base(weaponType, name, damageHigh, damageLow, damagePerSecond, attacksPerSecond)
         {
             Properties = properties;
         }
 
         public int Properties { get; private set; }
+
+        public override string ToString()
+        {
+            return "Type: " + WeaponType + "\n" + Name + "\nHigh damage: " + DamageHigh + "\nLow damage: " + DamageLow + "\nDamage per second: " + DamagePerSecond + "\nAttacks per second: " + AttacksPerSecond + "\nProperties: " + Properties;
+        }
+
+        public int GetProperties()
+        {
+            return properties;
+        }
     }
 }

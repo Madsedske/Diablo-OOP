@@ -11,8 +11,8 @@ namespace Diablo_OOP
         int properties;
         string secondary;
 
-        public LegendaryWeapons(string name, int damageHigh, int damageLow, double damagePerSecond, double attacksPerSecond, int properties, string secondary)
-          : base(name, damageHigh, damageLow, damagePerSecond, attacksPerSecond)
+        public LegendaryWeapons(string weaponType, string name, int damageHigh, int damageLow, double damagePerSecond, double attacksPerSecond, int properties, string secondary)
+          : base(weaponType, name, damageHigh, damageLow, damagePerSecond, attacksPerSecond)
         {
             Properties = properties;
             Secondary = secondary;
@@ -21,5 +21,10 @@ namespace Diablo_OOP
 
         public string Secondary { get; private set; }
 
+
+        public override string ToString()
+        {
+            return "Type: " + WeaponType + "\n" + Name + "\nHigh damage: " + DamageHigh + "\nLow damage: " + DamageLow + "\nDamage per second: " + DamagePerSecond + "\nAttacks per second: " + AttacksPerSecond + "\nProperties: " + Properties + "\nSecondary: " + Secondary;
+        }
     }
 }

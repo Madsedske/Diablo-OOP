@@ -11,8 +11,8 @@ namespace Diablo_OOP
         int properties;
         string setBonus;
 
-        public SetWeapons(string name, int damageHigh, int damageLow, double damagePerSecond, double attacksPerSecond, int properties, string setBonus)
-          : base(name, damageHigh, damageLow, damagePerSecond, attacksPerSecond)
+        public SetWeapons(string weaponType, string name, int damageHigh, int damageLow, double damagePerSecond, double attacksPerSecond, int properties, string setBonus)
+          : base(weaponType, name, damageHigh, damageLow, damagePerSecond, attacksPerSecond)
         {
             Properties = properties;
             SetBonus = setBonus;
@@ -20,6 +20,16 @@ namespace Diablo_OOP
         public int Properties { get; private set; }
 
         public string SetBonus { get; set; }
+
+        public override string ToString()
+        {
+            return "Type: " + WeaponType + "\n" + Name + "\nHigh damage: " + DamageHigh + "\nLow damage: " + DamageLow + "\nDamage per second: " + DamagePerSecond + "\nAttacks per second: " + AttacksPerSecond + "\nProperties: " + Properties + "\nSetBonus: " + SetBonus;
+        }
+
+        public int GetProperties()
+        {
+            return properties;
+        }
 
     }
 }
